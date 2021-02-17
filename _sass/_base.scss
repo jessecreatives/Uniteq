@@ -1,0 +1,167 @@
+@import "./parameters";
+@import "./utilities";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    position: relative;
+    font-family: map-deep-get($fonts, "jp", "family");
+    font-size: map-get($map: $font-sizes, $key: "level-5");
+    line-height: 2.5rem;
+}
+h1, h2, h3, h4 {
+    margin: 0;
+}
+a {
+    display: block!important;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+input, select, textarea {
+    display: block;
+    width: 100%;
+    border-width: 0.1rem;
+    border-color: map-get($map: $colors, $key: "muted");
+}
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.hide-mobile {
+    display: none;
+}
+.hide-tablet {
+    display: block;
+}
+@include responsive(lg) {
+    .hide-mobile {
+        display: block;
+    }
+    .hide-tablet {
+        display: none;
+    }
+}
+.marin-zero-mobile {
+    margin: 0;
+}
+.row {
+    margin: 0;
+    & > * {
+        padding: 0;
+    }
+}
+.container {
+    width: 80%;
+    min-width: 35rem;
+    margin: 0 auto!important;
+    padding-left: map-get($map: $paddings, $key: "level-7");
+    padding-right: map-get($map: $paddings, $key: "level-7");
+}
+@include responsive(lg) {
+    .container {
+        max-width: 120rem;
+        padding: 0;
+    }
+}
+.card {
+    border: none;
+}
+textarea::placeholder {
+    font-size: map-get($map: $font-sizes, $key: "level-6");
+}
+
+// ================= utility classes =====================
+// font sizes
+@each $name, $size in $font-sizes {
+    .font-#{$name} {
+        font-size: $size;
+    }
+}
+// font weights
+@each $category, $attrs in $fonts {
+    .font-#{$category}-light {
+        font-weight: map-get($map: $attrs, $key: "light");
+    }
+    .font-#{$category}-regular {
+        font-weight: map-get($map: $attrs, $key: "regular");
+    }
+    .font-#{$category}-bold {
+        font-weight: map-get($map: $attrs, $key: "bold");
+    }
+}
+
+// paddings
+@each $name, $size in $paddings {
+    .padding-#{$name} {
+        padding: $size;
+    }
+    .padding-top-#{$name} {
+        padding-top: $size;
+    }
+    .padding-bottom-#{$name} {
+        padding-bottom: $size;
+    }
+    .padding-left-#{$name} {
+        padding-left: $size;
+    }
+    .padding-right-#{$name} {
+        padding-right: $size;
+    }
+}
+
+// margins
+@each $name, $size in $margins {
+    .margin-#{$name} {
+        margin: $size;
+    }
+    .margin-top-#{$name} {
+        margin-top: $size;
+    }
+    .margin-bottom-#{$name} {
+        margin-bottom: $size;
+    }
+    .margin-left-#{$name} {
+        margin-left: $size;
+    }
+    .margin-right-#{$name} {
+        margin-right: $size;
+    }
+}
+
+// colors
+@each $color, $value in $colors {
+    .#{$color} {
+        color: $value;
+    }
+    .b-#{$color} {
+        background-color: $value;
+    }
+}
+
+// buttons
+.btn {
+    border: none;
+    border-radius: 0;
+    font-size: map-get($map: $font-sizes, $key: "level-6");
+    width: 13rem;
+    padding: map-get($map: $paddings, $key: "level-8");
+    &.btn-primary-no-bg {
+        width: auto;
+        padding: 0;
+    }
+}
+@each $type, $style in $buttons {
+    .btn-#{$type} {
+        color: map-get($map: $style, $key: "color");
+        background-color: map-get($map: $style, $key: "bg-color");
+    }
+}

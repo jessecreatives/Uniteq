@@ -1,0 +1,69 @@
+// colors
+$colors: (
+    "primary": #243394,
+    "secondary": #3144C4,
+    "light": #DADFF5,
+    "white": #FFF,
+    "dark": #262626
+);
+
+// fonts
+$fonts: (
+    "jp": ("family": "'M PLUS 1p', sans-serif", "light": 400, "regular": 500, "bold": 700),
+    "en": ("family": "'Open Sans', sans-serif", "light": 300, "regular": 400, "bold": 700)
+);
+
+$font-sizes: (
+    "level-1": 6rem,
+    "level-2": 3rem,
+    "level-3": 2rem,
+    "level-4": 1.8rem,
+    "level-5": 1.5rem,
+    "level-6": 1.2rem
+);
+
+// spacing
+$letter-spacing-lg: 0.2rem;
+$letter-spacing-sm: 0.1rem;
+
+$paddings: (
+    "level-1": 24.6rem,
+    "level-2": 12rem,
+    "level-3": 10rem,
+    "level-4": 6rem,
+    "level-5": 5rem,
+    "level-6": 4.2rem,
+    "level-7": 3.8rem,
+    "level-8": 3.5rem,
+    "level-9": 2.7rem,
+    "level-10": 1.3rem,
+);
+
+$margins: (
+    "level-1": 24.6rem,
+    "level-2": 12rem,
+    "level-3": 10rem,
+    "level-4": 6rem,
+    "level-5": 5rem,
+    "level-6": 4.2rem,
+    "level-7": 3.8rem,
+    "level-8": 3.5rem,
+    "level-9": 2.7rem,
+    "level-10": 1.3rem,
+);
+
+// buttons
+$buttons: (
+    "primary-no-bg": ("color": map-get($map: $colors, $key: "primary"), "bg-color": transparent),
+    "white-no-bg": ("color": map-get($map: $colors, $key: "white"), "bg-color": transparent),
+    "white-bg-primary": ("color": map-get($map: $colors, $key: "white"), "bg-color": map-get($map: $colors, $key: "primary")),
+    "primary-bg-secondary": ("color": map-get($map: $colors, $key: "primary"), "bg-color": map-get($map: $colors, $key: "secondary"))
+);
+
+// responsive
+$breakpoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px
+);

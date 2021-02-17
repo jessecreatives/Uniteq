@@ -1,0 +1,33 @@
+<header class="w-100 position-absolute top-0">
+    <nav class="container navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><img class="w-100" src="{% static 'images/logo.svg' %}" alt=""></a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <span class="material-icons f-1 primary close">close</span>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-4 active" aria-current="page" href="{% url 'home' %}">ホーム</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link p-4 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          事業紹介
+                        </a>
+                        <ul class="dropdown-menu py-3" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item f-3 primary px-5" href="{% url 'generator' %}">非常用発電機</a></li>
+                          <li><a class="dropdown-item f-3 primary px-5" href="{% url 'staffing' %}">人材派遣</a></li>
+                          <li><a class="dropdown-item f-3 primary px-5" href="{% url 'cleaning' %}">清掃サービス</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-4" href="{% url 'company' %}">会社案内</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-4" href="{% url 'contact' %}">お問い合わせ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <a href="" class="mx-2"><span class="material-icons align-middle">call</span></a>
+                <a href="" class="mx-2"><span class="material-icons align-middle">email</span></a>
+            </div>
+    </nav>
+</header>
