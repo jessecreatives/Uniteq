@@ -50,7 +50,7 @@ button {
         display: none;
     }
 }
-.marin-zero-mobile {
+.margin-zero-mobile {
     margin: 0;
 }
 .row {
@@ -87,15 +87,9 @@ textarea::placeholder {
     }
 }
 // font weights
-@each $category, $attrs in $fonts {
-    .font-#{$category}-light {
-        font-weight: map-get($map: $attrs, $key: "light");
-    }
-    .font-#{$category}-regular {
-        font-weight: map-get($map: $attrs, $key: "regular");
-    }
-    .font-#{$category}-bold {
-        font-weight: map-get($map: $attrs, $key: "bold");
+@each $weight, $value in $weights {
+    .font-#{$weight} {
+        font-weight: $value;
     }
 }
 

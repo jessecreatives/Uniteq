@@ -1,0 +1,27 @@
+<div class="layout layout2">
+    <div class="container row">
+        {% if include.reverse == true %}
+            <div class="col-12 col-md-6">
+                <h2>{{ include.title }}</h2>
+                <p>{{ include.text }}</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="circle">
+                    <div class="num"></div>
+                </div>
+                <img src="{{include.img}}" alt="">
+            </div>
+        {% else %}
+            <div class="col-12 col-md-6">
+                <div class="circle">
+                    <div class="num"></div>
+                </div>
+                <img src="{{include.img}}" alt="">
+            </div>
+            <div class="col-12 col-md-6">
+                <h2>{{ include.title }}</h2>
+                <p>{{ include.text }}</p>
+            </div>
+        {% endif %}
+    </div>
+</div>

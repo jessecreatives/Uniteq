@@ -1,0 +1,24 @@
+main_nav:
+  - name: "ホーム"
+    url: "/"
+    weight: 2
+  - name: "事業紹介"
+    url: "#"
+    weight: 2
+  - name: "会社案内"
+    url: "/company/"
+    weight: 3
+  - name: "お問い合わせ"
+    url: "/contact/"
+    weight: 4
+
+sub_nav:
+  - name: "非常用発電機点検"
+    url: "/generator/"
+    weight: 2
+  - name: "人材派遣"
+    url: "/staffing/"
+    weight: 2
+  - name: "清掃業務"
+    url: "/clean/"
+    weight: 3

@@ -1,33 +1,38 @@
-<header class="w-100 position-absolute top-0">
-    <nav class="container navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#"><img class="w-100" src="{% static 'images/logo.svg' %}" alt=""></a>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
-                <span class="material-icons f-1 primary close">close</span>
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link p-4 active" aria-current="page" href="{% url 'home' %}">ホーム</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link p-4 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          事業紹介
-                        </a>
-                        <ul class="dropdown-menu py-3" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item f-3 primary px-5" href="{% url 'generator' %}">非常用発電機</a></li>
-                          <li><a class="dropdown-item f-3 primary px-5" href="{% url 'staffing' %}">人材派遣</a></li>
-                          <li><a class="dropdown-item f-3 primary px-5" href="{% url 'cleaning' %}">清掃サービス</a></li>
-                        </ul>
-                      </li>
-                    <li class="nav-item">
-                        <a class="nav-link p-4" href="{% url 'company' %}">会社案内</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link p-4" href="{% url 'contact' %}">お問い合わせ</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="btn-group">
-                <a href="" class="mx-2"><span class="material-icons align-middle">call</span></a>
-                <a href="" class="mx-2"><span class="material-icons align-middle">email</span></a>
-            </div>
+<header class="header">
+    <nav class="navbar navbar-expand-lg container">
+      <a class="navbar-brand" href="{{site.baseurl}}">
+        <img src="{{site.baseurl}}/assets/img/logo.svg" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon material-icons white font-level-2">menu</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <button type="button" class="material-icons muted close-menu font-jp-light hide-tablet">close</button>
+        <ul class="navbar-nav">
+          {% for item in site.data.menu.main_nav %}
+            {% if item.url == "#" %}
+                <li class="nav-item dropdown">
+                    <a href="{{ item.url }}" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.name }}</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for item in site.data.menu.sub_nav %}
+                            <li>
+                                <a class="dropdown-item" href="{{item.url}}">{{item.name}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% else %}
+                <li class="nav-item"><a href="{{ item.url }}" class="nav-link">{{ item.name }}</a></li>
+            {% endif %}
+          {% endfor %}   
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button class="navbar-toggler light p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="material-icons">menu</span>
+        </button>
+        <button type="button" class="material-icons">call</button>
+        <button type="button" class="material-icons">email</button>
+      </div>
     </nav>
-</header>
+  </header>
