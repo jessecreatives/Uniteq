@@ -11,9 +11,11 @@ html {
 }
 body {
     position: relative;
-    font-family: map-deep-get($fonts, "jp", "family");
-    font-size: map-get($map: $font-sizes, $key: "level-5");
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: map-get($map: $font-sizes, $key: "level-6");
     line-height: 2.5rem;
+    counter-reset: layout;
+    z-index: -100;
 }
 h1, h2, h3, h4 {
     margin: 0;
@@ -35,6 +37,9 @@ button {
     border: 0;
     background-color: transparent;
     cursor: pointer;
+}
+img {
+    display: block;
 }
 .hide-mobile {
     display: none;
@@ -60,7 +65,7 @@ button {
     }
 }
 .container {
-    width: 80%;
+    width: 100%;
     min-width: 35rem;
     margin: 0 auto!important;
     padding-left: map-get($map: $paddings, $key: "level-7");
@@ -68,6 +73,7 @@ button {
 }
 @include responsive(lg) {
     .container {
+        width: 80%;
         max-width: 120rem;
         padding: 0;
     }
@@ -80,6 +86,9 @@ textarea::placeholder {
 }
 
 // ================= utility classes =====================
+.en {
+    font-family: 'Open Sans', sans-serif;;
+}
 // font sizes
 @each $name, $size in $font-sizes {
     .font-#{$name} {

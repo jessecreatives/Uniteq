@@ -1,0 +1,137 @@
+.layout {
+    text-align: center;
+    margin-bottom: map-get($map: $margins, $key: "level-3");
+    counter-increment: layout;
+    img {
+        width: 100%;
+    }
+    .img-container {
+        position: relative;
+        margin-bottom: map-get($map: $margins, $key: "level-6");
+    }
+    h2 {
+        margin-bottom: map-get($map: $margins, $key: "level-7");;
+        span {
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 30%;
+                height: 0.3rem;
+                background-color: map-get($map: $colors, $key: "primary");
+                position: absolute;
+                left: 0;
+                bottom: -1.8rem;
+            }
+        }
+    }
+    .circle {
+        content: "";
+        display: block;
+        width: 6rem;
+        height: 6rem;
+        border-bottom-right-radius: 6rem;
+        background-color: map-get($map: $colors, $key: "white");
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        .num {
+            &::after {
+                content: "0"counter(layout);
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translate(-50%, -30%);
+            }
+        }
+    }
+    &.layout1 {
+        & > .container {
+            width: 100%;
+            padding: 0;
+        }
+        .bars {
+            position: relative;
+            img {
+                width: 71%;
+            }
+            &::before, &::after {
+                content: "";
+                display: block;
+                height: 100%;
+                background-color: map-get($map: $colors, $key: "primary");
+                position: absolute;
+                top: 0;
+            }
+            &::before {
+                width: 8%;
+                right: 18%;
+            }
+            &::after {
+                width: 15%;
+                right: 0;
+            }
+        }
+    }
+    &.layout2 {
+        position: relative;
+        padding: map-get($map: $paddings, $key: "level-2") 0;
+        z-index: 1;
+        // pale bg
+        &::before {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 100%;
+            background-color: map-get($map: $colors, $key: "light");
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .img-container {
+            position: relative;
+            z-index: 100;
+            img {
+                position: relative;
+                z-index: 0;
+            }
+            // primary bg
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: calc(1 / 8 * 100% + 50%);
+                height: 100%;
+                background: map-get($map: $colors, $key: "primary");
+                left: calc(-1 / 8 * 100%);
+                top: calc(1 / 8 * 272.66 / 181.72 * 100%);
+                z-index: 0;
+            }
+        }
+        // dots bg
+        // num postion
+        .circle {
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 6rem;
+            left: auto;
+            top: auto;
+            right: 0;
+            bottom: 0;
+            .num {
+                &::after {
+                    left: auto;
+                    top: auto;
+                    right: 0;
+                    bottom: 0;
+                    transform: translate(50%, 30%);
+                }
+            }
+        }
+    }
+    &.layout3 {
+
+    }
+}

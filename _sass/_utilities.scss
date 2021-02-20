@@ -1,0 +1,13 @@
+@import "./parameters";
+
+@mixin responsive($breakpoint, $isUp: true) {
+    @if $isUp {
+      @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @media (max-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+        @content;
+      }
+    }
+  }

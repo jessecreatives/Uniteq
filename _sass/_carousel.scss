@@ -1,0 +1,10 @@
+.carousel-wrapper {
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+    margin-bottom: map-get($map: $margins, $key: "level-2");
+    h1 {
+        font-size: map-get($map: $font-sizes, $key: "level-3");
+        z-index: 1000;
+    }
+}
