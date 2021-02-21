@@ -7,4 +7,34 @@
             margin-bottom: map-get($margins, "level-6");;
         }
     }
+    .arrow {
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            width: 0.6rem;
+            height: 0.6rem;
+            border-right: 0.2rem solid map-get($colors, "white");
+            border-bottom: 0.2rem solid map-get($colors, "white");
+            position: absolute;
+            left: -0.6rem;
+            top: 50%;
+            transform: rotate(-45deg) translateY(-100%);
+        }
+    }
+    @include responsive(md) {
+        .container {
+            margin-bottom: map-get($margins, "level-6")!important;
+        }
+        .contact-wrapper {
+            text-align: left;
+            .btn {
+                margin-left: 0;
+            }
+        }
+        .footer-nav {
+            display: flex;
+            flex-direction: row;
+        }
+    }
 }

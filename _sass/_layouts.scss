@@ -183,9 +183,27 @@
         padding: map-get($map: $paddings, $key: "level-2") 0;
         .col-4 {
             margin-bottom: map-get($map: $margins, $key: "level-7");
-            border-bottom: 0.5rem solid map-get($map: $colors, $key: "primary");
             &:last-child {
                 margin-bottom: 0;
+            }
+            img {
+                border-bottom: 0.5rem solid map-get($map: $colors, $key: "primary");
+            }
+        }
+        @include responsive(md) {
+            .col-4 {
+                &:nth-child(3n+1) {
+                    padding-left: 0;
+                    padding-right: 6%;
+                }
+                &:nth-child(3n+2) {
+                    padding-left: 3%;
+                    padding-right: 3%;
+                }
+                &:nth-child(3n) {
+                    padding-right: 0;
+                    padding-left: 6%;
+                }
             }
         }
     }

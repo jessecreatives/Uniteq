@@ -23,9 +23,20 @@ h1, h2, h3, h4 {
 a {
     display: block!important;
     text-decoration: none;
+    transition: opacity 0.3s;
+    &:hover {
+        color: inherit;
+        opacity: .8;
+        transition: opacity 0.3s;
+    }
+}
+p {
+    margin: 0;
 }
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 input, select, textarea {
     display: block;
@@ -47,7 +58,7 @@ img {
 .hide-tablet {
     display: block;
 }
-@include responsive(lg) {
+@include responsive(md) {
     .hide-mobile {
         display: block;
     }
@@ -71,9 +82,15 @@ img {
     padding-left: map-get($map: $paddings, $key: "level-7");
     padding-right: map-get($map: $paddings, $key: "level-7");
 }
-@include responsive(lg) {
+@include responsive(md) {
     .container {
         width: 80%;
+        max-width: 80rem;
+        padding: 0;
+    }
+}
+@include responsive(lg) {
+    .container {
         max-width: 120rem;
         padding: 0;
     }
