@@ -1,27 +1,41 @@
-<div class="layout layout2">
+{% if include.reverse == true %}
+<section class="layout layout2 reverse">
     <div class="container row">
-        {% if include.reverse == true %}
-            <div class="text-container col-12 col-md-6">
+        <div class="text-container col-12 col-md-6">
                 <h2 class="font-bold primary"><span>{{ include.title }}</span></h2>
-                <p class="primary">{{ include.text }}</p>
+                <p class="primary margin-bottom-level-7">{{ include.text }}</p>
+                <div class="btn-group d-flex flex-row justify-content-center">
+                    <a class="btn btn-white-bg-primary margin-right-level-8" href="">相談へ</a>
+                    <a class="btn btn-primary-no-bg-border" href="">詳細へ</a>
+                </div>
             </div>
-            <div class="img-container col-8 offset-2 offset-md-0 col-md-6">
+        <div class="img-container col-8 offset-2 offset-md-0 col-md-6">
                 <div class="circle">
                     <div class="num font-level-1 font-bold primary"></div>
                 </div>
                 <img src="{{site.baseurl}}/assets/img/{{include.img}}" alt="">
-            </div>
-        {% else %}
-            <div class="img-container col-8 offset-2 offset-md-0 col-md-6">
-                <div class="circle">
-                    <div class="num font-level-1 font-bold primary"></div>
-                </div>
-                <img src="{{site.baseurl}}/assets/img/{{include.img}}" alt="">
-            </div>
-            <div class="text-container col-12 col-md-6">
-                <h2 class="font-bold primary"><span>{{ include.title }}</span></h2>
-                <p class="primary">{{ include.text }}</p>
-            </div>
-        {% endif %}
+                <img class="dots" src="{{site.baseurl}}/assets/img/dots.svg" alt="">
+        </div>
     </div>
-</div>
+</section>
+{% else %}
+<section class="layout layout2">
+    <div class="container row">
+        <div class="img-container col-8 offset-2 offset-md-0 col-md-6">
+            <div class="circle">
+                <div class="num font-level-1 font-bold primary"></div>
+            </div>
+            <img src="{{site.baseurl}}/assets/img/{{include.img}}" alt="">
+            <img class="dots" src="{{site.baseurl}}/assets/img/dots.svg" alt="">
+        </div>
+        <div class="text-container col-12 col-md-6">
+            <h2 class="font-bold primary"><span>{{ include.title }}</span></h2>
+            <p class="primary margin-bottom-level-7">{{ include.text }}</p>
+            <div class="btn-group d-flex flex-row justify-content-center">
+                <a class="btn btn-white-bg-primary margin-right-level-8" href="">相談へ</a>
+                <a class="btn btn-primary-no-bg-border" href="">詳細へ</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

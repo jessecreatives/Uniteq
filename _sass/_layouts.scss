@@ -78,6 +78,7 @@
     &.layout2 {
         position: relative;
         padding: map-get($map: $paddings, $key: "level-2") 0;
+        margin-bottom: 0;
         z-index: 1;
         // pale bg
         &::before {
@@ -94,6 +95,7 @@
         .img-container {
             position: relative;
             z-index: 100;
+            margin-bottom: map-get($map: $margins, $key: "level-5");
             img {
                 position: relative;
                 z-index: 0;
@@ -110,8 +112,16 @@
                 top: calc(1 / 8 * 272.66 / 181.72 * 100%);
                 z-index: 0;
             }
+            // dots bg
+            .dots {
+                position: absolute;
+                width: auto;
+                height: 100%;
+                right: calc(-181.72 / 272.66 * 100% / 3 - 0.5rem);
+                top: calc(-100% / 3 + 0.5rem);
+                z-index: -1;
+            }
         }
-        // dots bg
         // num postion
         .circle {
             border-bottom-right-radius: 0;
@@ -130,8 +140,53 @@
                 }
             }
         }
+        &.reverse {
+            // pale bg
+            &::before {
+                left: auto;
+                right: 0;
+            }
+            // num postion
+            .circle {
+                border-top-left-radius: 0;
+                border-top-right-radius: 6rem;
+                right: auto;
+                left: 0;
+                .num {
+                    &::after {
+                        right: auto;
+                        left: 0;
+                        transform: translate(-50%, 30%);
+                    }
+                }
+            }
+            .text-container {
+                order: 2
+            }
+            .img-container {
+                order: 1;
+                // primary bg
+                &::before {
+                    left: auto;
+                    right: calc(-1 / 8 * 100%);
+                }
+                // dots bg
+                .dots {
+                    right: auto;
+                    left: calc(-181.72 / 272.66 * 100% / 3 - 0.5rem);
+                }
+            }
+        }
     }
     &.layout3 {
-
+        margin-bottom: 0;
+        padding: map-get($map: $paddings, $key: "level-2") 0;
+        .col-4 {
+            margin-bottom: map-get($map: $margins, $key: "level-7");
+            border-bottom: 0.5rem solid map-get($map: $colors, $key: "primary");
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }

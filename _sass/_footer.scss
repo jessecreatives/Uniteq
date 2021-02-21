@@ -1,0 +1,10 @@
+.footer {
+    padding-top: map-get($map: $paddings, $key: "level-6");
+    .contact-wrapper {
+        text-align: center;
+        .btn {
+            margin: 0 auto;
+            margin-bottom: map-get($margins, "level-6");;
+        }
+    }
+}

@@ -10,6 +10,10 @@
             <div class="text-container col-12 col-md-6 container">
                 <h2 class="font-bold primary">{{ include.title }}</h2>
                 <p class="primary">{{ include.text }}</p>
+                <div class="btn-group d-flex flex-row justify-content-center">
+                    <a href="">相談へ</a>
+                    <a href="">詳細へ</a>
+                </div>
             </div>
         {% else %}
             <div class="img-container bars col-11 offset-1 offset-md-0 col-md-6">
@@ -20,7 +24,11 @@
             </div>
             <div class="text-container col-12 col-md-6 container">
                 <h2 class="font-bold primary"><span>{{ include.title }}</spa></h2>
-                <p class="primary">{{ include.text }}</p>
+                <p class="primary margin-bottom-level-7">{{ include.text }}</p>
+                <div class="btn-group d-flex flex-row justify-content-center">
+                    <a class="btn btn-white-bg-primary margin-right-level-8" href="">相談へ</a>
+                    <a class="btn btn-primary-no-bg-border" href="">詳細へ</a>
+                </div>
             </div>
         {% endif %}
     </div>
