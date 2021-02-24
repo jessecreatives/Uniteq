@@ -1,3 +1,5 @@
+@import "./utilities";
+
 .carousel-wrapper {
     position: relative;
     max-height: 100vh;
@@ -5,6 +7,11 @@
     margin-bottom: map-get($map: $margins, $key: "level-2");
     h1 {
         font-size: map-get($map: $font-sizes, $key: "level-3");
+        line-height: 3.5rem;
         z-index: 1000;
+        @include responsive(lg) {
+            font-size: map-get($map: $font-sizes, $key: "level-2");
+            line-height: 4rem;
+        }
     }
 }

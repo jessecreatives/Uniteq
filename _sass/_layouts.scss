@@ -1,3 +1,5 @@
+@import "./utilities";
+
 .layout {
     text-align: center;
     margin-bottom: map-get($map: $margins, $key: "level-3");
@@ -47,6 +49,15 @@
             }
         }
     }
+    .text-container {
+        text-align: center;
+        p {
+            margin-bottom: map-get($map: $margins, $key: "level-8");
+        }
+        @include responsive(md) {
+            text-align: left;
+        }
+    }
     &.layout1 {
         & > .container {
             width: 100%;
@@ -74,6 +85,53 @@
                 right: 0;
             }
         }
+        @include responsive(md) {
+            .bars {
+                img {
+                    width: 84%;
+                }
+                &::before {
+                    width: 4%;
+                    right: 10%;
+                }
+                &::after {
+                    width: 8%;
+                }
+            }
+        }
+        @include responsive(lg) {
+            .bars {
+                img {
+                    width: 71%;
+                }
+                &::before {
+                    width: 8%;
+                    right: 18%;
+                }
+                &::after {
+                    width: 15%;
+                }
+            }
+        }
+        @include responsive(md) {
+            & > .container {
+                width: 80%;
+                position: relative;
+                left: 10%;
+            }
+            .img-container {
+                order: 2;
+            }
+            // disable container width on text-container
+            .text-container {
+                order: 1;
+                width: 50%;
+                position: absolute;
+                top: 50%;
+                left: -10%;
+                transform: translateY(-50%);
+            }
+        }
     }
     &.layout2 {
         position: relative;
@@ -91,6 +149,9 @@
             left: 0;
             top: 0;
             z-index: -1;
+            @include responsive(md) {
+                width: 30%;
+            }
         }
         .img-container {
             position: relative;
@@ -120,6 +181,20 @@
                 right: calc(-181.72 / 272.66 * 100% / 3 - 0.5rem);
                 top: calc(-100% / 3 + 0.5rem);
                 z-index: -1;
+                @include responsive(md) {
+                    height: 60%;
+                    top: calc(-100% / 3 * 0.6 + 0.3rem);
+                    right: calc(-181.72 / 272.66 * 100% / 3 * 0.6 - 0.3rem);
+                }
+            }
+        }
+        .text-container {
+            padding: 0;
+            @include responsive(md) {
+                padding-left: map-get($map: $paddings, $key: "level-4");
+            }
+            @include responsive(lg) {
+                padding-left: map-get($map: $paddings, $key: "level-3");
             }
         }
         // num postion
@@ -161,7 +236,14 @@
                 }
             }
             .text-container {
-                order: 2
+                order: 2;
+                padding-left: 0;
+                @include responsive(md) {
+                    padding-right: map-get($map: $paddings, $key: "level-4");
+                }
+                @include responsive(lg) {
+                    padding-right: map-get($map: $paddings, $key: "level-3");
+                }
             }
             .img-container {
                 order: 1;
@@ -174,6 +256,17 @@
                 .dots {
                     right: auto;
                     left: calc(-181.72 / 272.66 * 100% / 3 - 0.5rem);
+                    @include responsive(md) {
+                        left: calc(-181.72 / 272.66 * 100% / 3 * 0.6 - 0.3rem);
+                    }
+                }
+            }
+            @include responsive(md) {
+                .text-container {
+                    order: 1;
+                }
+                .img-container {
+                    order: 2;
                 }
             }
         }

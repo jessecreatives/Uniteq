@@ -187,7 +187,11 @@ textarea::placeholder {
     }
 }
 .btn-group {
+    justify-content: center;
     * {
         flex-grow: 0!important;
+    }
+    @include responsive(md) {
+        justify-content: flex-start;
     }
 }
