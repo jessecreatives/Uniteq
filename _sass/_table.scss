@@ -1,0 +1,21 @@
+.table-container {
+    margin: map-get($margins, "level-3") auto!important;
+    h2 {
+        span {
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 30%;
+                height: 0.3rem;
+                background-color: map-get($map: $colors, $key: "secondary");
+                position: absolute;
+                left: 0;
+                bottom: -1.8rem;
+            }
+        }
+    }
+    th, td {
+        padding: map-get($paddings, "level-9") 0;
+    }
+}

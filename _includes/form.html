@@ -1,0 +1,44 @@
+<div class="container form-container font-level-6">
+    <h2 class="font-bold dark margin-bottom-level-5">
+        <span>お問い合わせ</span>
+    </h2>
+    <p class="row margin-bottom-level-8 align-items-center border-top border-bottom padding-top-level-8 padding-bottom-level-8 tel-container">
+        <span class="col-12 col-md-6 tel-time">お電話での受付時間：　<span class="text-decoration-underline font-bold">平日09:00~18:00</span></span>
+        <span class="col-12 col-md-6 font-level-2 font-bold tel">011-594-8026</span>
+    </p>
+    <p class="margin-bottom-level-5">メールでのお問い合わせの場合は、お手数ではございますが、以下にご入力いただき、<br>「送信」をクリックお願い致します。追って担当よりご連絡申し上げます。</p>
+    <form action="">
+        <div class="form-group margin-bottom-level-8">
+            <label for="business-name" class="margin-bottom-level-9">法人名（法人の方のみ）</label>
+            <input type="text" class="form-control font-level-6" id="business-name" placeholder="法人名">
+          </div>
+        <div class="form-group margin-bottom-level-8">
+        <label for="name" class="margin-bottom-level-9">氏名 &#42;</label>
+        <input type="text" class="form-control font-level-6" id="name" placeholder="氏名">
+        </div>
+        <div class="form-group margin-bottom-level-8">
+            <label for="email" class="margin-bottom-level-9">メールアドレス &#42;</label>
+            <input type="email" class="form-control font-level-6" id="email" placeholder="メールアドレス">
+        </div>
+        <div class="form-group margin-bottom-level-8">
+        <label for="tel" class="margin-bottom-level-9">電話番号</label>
+        <input type="tel" class="form-control font-level-6" id="tel" placeholder="電話番号">
+        </div>
+        <div class="form-group margin-bottom-level-8">
+        <label for="category" class="margin-bottom-level-9">お問い合わせ種別 &#42;</label>
+        <select class="form-control font-level-6" id="category">
+            <option selected value="" disabled>選択して下さい</option>
+            <option>発電機点検について</option>
+            <option>人材派遣について</option>
+            <option>清掃業務について</option>
+            <option>求人について</option>
+            <option>その他</option>
+        </select>
+        </div>
+        <div class="form-group margin-bottom-level-7">
+        <label for="exampleTextarea" class="margin-bottom-level-9">お問い合わせ内容 &#42;</label>
+        <textarea class="form-control font-level-6" id="exampleTextarea" rows="6"></textarea>
+        </div>
+        <button type="submit" class="btn btn-white-bg-primary">送信</button>
+    </form>
+</div>

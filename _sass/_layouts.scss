@@ -20,7 +20,7 @@
                 display: block;
                 width: 30%;
                 height: 0.3rem;
-                background-color: map-get($map: $colors, $key: "primary");
+                background-color: map-get($map: $colors, $key: "secondary");
                 position: absolute;
                 left: 0;
                 bottom: -1.8rem;

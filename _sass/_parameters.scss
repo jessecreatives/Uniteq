@@ -58,6 +58,7 @@ $buttons: (
     "white-bg-primary": ("color": map-get($map: $colors, $key: "white"), "bg-color": map-get($map: $colors, $key: "primary"), "border": 0.2rem solid map-get($map: $colors, $key: "primary")),
     "primary-bg-secondary": ("color": map-get($map: $colors, $key: "primary"), "bg-color": map-get($map: $colors, $key: "secondary"), "border": 0.2rem solid map-get($map: $colors, $key: "secondary")),
     "primary-no-bg-border": ("color": map-get($map: $colors, $key: "primary"), "bg-color": transparent, "border": 0.2rem solid map-get($map: $colors, $key: "primary")),
+    "primary-bg-white-border": ("color": map-get($map: $colors, $key: "primary"), "bg-color": map-get($map: $colors, $key: "white"), "border": 0.2rem solid map-get($map: $colors, $key: "primary")),
     "white-no-bg-border": ("color": map-get($map: $colors, $key: "white"), "bg-color": transparent, "border": 0.2rem solid map-get($map: $colors, $key: "white")),
 );
 
