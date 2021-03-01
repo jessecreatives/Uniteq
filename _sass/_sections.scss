@@ -1,0 +1,14 @@
+.section {
+    padding: map-get($paddings, "level-2") 0;
+    &__cta {
+        .btn {
+            width: 16.5rem!important;
+        }
+        .tel {
+        }
+        @include responsive(md) {
+            .tel {
+            }
+        }
+    }
+}

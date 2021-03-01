@@ -19,6 +19,19 @@ body {
 }
 h1, h2, h3, h4 {
     margin: 0;
+    font-weight: bold;
+}
+h1 {
+    font-size: map-get($font-sizes, "level-1");
+}
+h2 {
+    font-size: map-get($font-sizes, "level-2");
+}
+h3 {
+    font-size: map-get($font-sizes, "level-3");
+}
+h4 {
+    font-size: map-get($font-sizes, "level-4");
 }
 a {
     display: block!important;
@@ -111,6 +124,16 @@ textarea::placeholder {
     .font-#{$name} {
         font-size: $size;
     }
+    .font-md-#{$name} {
+        @include responsive(md) {
+            font-size: $size;
+        }
+    }
+    .font-lg-#{$name} {
+        @include responsive(lg) {
+            font-size: $size;
+        }
+    }
 }
 // font weights
 @each $weight, $value in $weights {
@@ -136,6 +159,56 @@ textarea::placeholder {
     .padding-right-#{$name} {
         padding-right: $size;
     }
+    .padding-md-#{$name} {
+        @include responsive(md) {
+            padding: $size;
+        }
+    }
+    .padding-top-md-#{$name} {
+        @include responsive(md) {
+            padding-top: $size;
+        }
+    }
+    .padding-bottom-md-#{$name} {
+        @include responsive(md) {
+            padding-bottom: $size;
+        }
+    }
+    .padding-left-md-#{$name} {
+        @include responsive(md) {
+            padding-left: $size;
+        }
+    }
+    .padding-right-md-#{$name} {
+        @include responsive(md) {
+            padding-right: $size;
+        }
+    }
+    .padding-lg-#{$name} {
+        @include responsive(lg) {
+            padding: $size;
+        }
+    }
+    .padding-top-lg-#{$name} {
+        @include responsive(lg) {
+            padding-top: $size;
+        }
+    }
+    .padding-bottom-lg-#{$name} {
+        @include responsive(lg) {
+            padding-bottom: $size;
+        }
+    }
+    .padding-left-lg-#{$name} {
+        @include responsive(lg) {
+            padding-left: $size;
+        }
+    }
+    .padding-right-lg-#{$name} {
+        @include responsive(lg) {
+            padding-right: $size;
+        }
+    }
 }
 
 // margins
@@ -155,6 +228,59 @@ textarea::placeholder {
     .margin-right-#{$name} {
         margin-right: $size;
     }
+    .margin-md-#{$name} {
+        @include responsive(md) {
+            margin: $size;
+        }
+    }
+    .margin-top-md-#{$name} {
+        @include responsive(md) {
+            margin-top: $size;
+        }
+    }
+    .margin-bottom-md-#{$name} {
+        @include responsive(md) {
+            margin-bottom: $size;
+        }
+    }
+    .margin-left-md-#{$name} {
+        @include responsive(md) {
+            margin-left: $size;
+        }
+    }
+    .margin-right-md-#{$name} {
+        @include responsive(md) {
+            margin-right: $size;
+        }
+    }
+    .margin-lg-#{$name} {
+        @include responsive(lg) {
+            margin: $size;
+        }
+    }
+    .margin-top-lg-#{$name} {
+        @include responsive(lg) {
+            margin-top: $size;
+        }
+    }
+    .margin-bottom-lg-#{$name} {
+        @include responsive(lg) {
+            margin-bottom: $size;
+        }
+    }
+    .margin-left-lg-#{$name} {
+        @include responsive(lg) {
+            margin-left: $size;
+        }
+    }
+    .margin-right-lg-#{$name} {
+        @include responsive(lg) {
+            margin-right: $size;
+        }
+    }
+}
+.margin-auto {
+    margin: 0 auto;
 }
 
 // colors

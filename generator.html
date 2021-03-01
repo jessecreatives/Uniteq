@@ -4,9 +4,39 @@ layout: default
 <!-- hero -->
 {% include hero.html title-en="Generator Maintenance" title-jp="非常用発電機点検" image="businesses.png" %}
 <!-- introduction -->
-<div class="g-introduction">
-    <p>平成18年6月1日に消防法が改正され、<span class="d-block">『年1回の非常用発電機の30%以上の出力確認の義務化』</span>となりました。</p>
-</div>
+<section class="section introduction text-center container">
+    <div class="inner-container">
+        <p>平成18年6月1日に消防法が改正され、<span class="d-block">『年1回の非常用発電機の30%以上の出力確認の義務化』</span>となりました。</p>
+        <p>さらに、近年、30%負荷点検の実施が厳しくなっております。その大きな理由として「整備不良などの理由で正常に稼働できないもの」があるからです。</p>
+    </div>
+</section>
 <!-- laws -->
+<section class="section laws b-light">
+    <div class="container row">
+        <div class="card col-12 col-md-4">
+            <div class="card-body">
+              <h3 class="card-title">電気事業法の月次点検</h3>
+              <p class="card-text">電気系列と5分程度の無負荷（空ふかし）による試運転。</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-4">
+            <div class="card-body">
+              <h3 class="card-title">消防法の定期点検</h3>
+              <p class="card-text">電気系列と6か月に1回の機能目視点検と、1年に1回の無負荷(空ふかし)による試運転。5分程度の無負荷(空ふかし)による試運転。</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-4">
+            <div class="card-body">
+              <h3 class="card-title">消防法の総合負荷点検</h3>
+              <p class="card-text">1年に1回、30分間30％以上の負荷をかけ、非常時のスプリンクラーや消火栓ポンプの発電出力を確認し、蓄積したカーボンを燃焼排出させる重要な点検。</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- point -->
+{% include section.html name="point" title="重要なことは" text="30％負荷運転の点検は、無負荷（空ふかし）による試運転でエンジン内に蓄積したカーボンを燃焼排出させ、非常時に30%以上の出力電源を確保し、発電機を長期間健全に保つための重要な点検です。設置経過年数にかかわらず、できるだけ早い時期に負荷点検を実施し、非常時の電源確保に備えてください。" %}
 
-<!-- inspection -->
+<!-- our inspection -->
+{% include section.html name="our-inspection" title="当社の負荷試験" text="施設の電気を止めることなく、約2時間程度で負荷試験を行います。費用は従来の料金の3分の1程度で行うことが可能となりました。" bg="b-primary" color="white" %}
+
+{% include cta.html %}
