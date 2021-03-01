@@ -22,16 +22,16 @@ h1, h2, h3, h4 {
     font-weight: bold;
 }
 h1 {
-    font-size: map-get($font-sizes, "level-1");
-}
-h2 {
     font-size: map-get($font-sizes, "level-2");
 }
-h3 {
+h2 {
     font-size: map-get($font-sizes, "level-3");
 }
-h4 {
+h3 {
     font-size: map-get($font-sizes, "level-4");
+}
+h4 {
+    font-size: map-get($font-sizes, "level-5");
 }
 a {
     display: block!important;
@@ -298,8 +298,8 @@ textarea::placeholder {
     border: none;
     border-radius: 10rem!important;
     font-size: map-get($map: $font-sizes, $key: "level-6");
-    width: 13rem!important;
-    padding: map-get($map: $paddings, $key: "level-10");
+    width: 13.5rem!important;
+    padding: map-get($map: $paddings, $key: "level-9");
     &.btn-primary-no-bg {
         width: auto;
         padding: 0;

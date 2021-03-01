@@ -10,10 +10,10 @@
             {% if item.url == "#" %}
                 <li class="nav-item dropdown">
                     <a href="{{ item.url }}" class="nav-link dropdown-toggle white" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.name }}</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu p-0 " aria-labelledby="navbarDropdown">
                         {% for item in site.data.menu.sub_nav %}
                             <li>
-                                <a class="dropdown-item " href="{{item.url}}">{{item.name}}</a>
+                                <a class="dropdown-item font-level-6 padding-level-9 text-center" href="{{item.url}}">{{item.name}}</a>
                             </li>
                         {% endfor %}
                     </ul>
